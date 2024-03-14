@@ -1,0 +1,48 @@
+body{
+    width: 98vw;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+}
+#main-bg {
+    background-color: #E7EDF7;
+    min-width: 40rem;
+    max-width: 60rem;
+    min-height: 15rem ;
+    /* height: 22rem; */
+    max-height: 30rem;
+    
+    /* margin: auto; */
+    /* padding: auto; */
+    text-align: center;
+
+    padding: 1.5rem 1.5rem ;
+
+}
+
+#main-content {
+    background-color: #F5F5F5;
+    padding-top: 0.3rem;
+    padding-bottom: 1rem;
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    background-color: #A747EB;
+    color: white;
+    padding: 0.3rem 0.9rem;
+}
+
+#startGame{
+    margin-top: 0.35rem;
+}
+
+li{
+    list-style: none;
+}

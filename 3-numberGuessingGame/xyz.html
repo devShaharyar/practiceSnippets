@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <!-- css -->
+    <link rel="stylesheet" href="xyz.css">
+    <!-- font google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="main-bg">
+        <h1>Guessing the number game </h1>
+        <div id="main-content">
+            <h2>Select a range of number</h2>
+            <input type="radio" name="guessRange" id="10" value="10"> <label for="10">10</label>
+            <input type="radio" name="guessRange" id="100" value="100"> <label for="100">100</label>
+            <input type="radio" name="guessRange" id="1000" value="1000"> <label for="1000">1000</label><br>
+            <button id="startGame" disabled> Start </button>
+        </div>
+
+
+    </div>
+
+    <!-- DIALOG MODALS TO BE USED LATER WHEN GUESS IS MADE OR NUMBER OF TRIES END  -->
+    <dialog id="onSuccess">
+        <p>Congratulations !</p>
+        <button autofocus onclick={location.reload()}>Play Again </button>
+    </dialog>
+    <dialog id="onFailure">
+        <p>You Failed !</p>
+        <button autofocus onclick={location.reload()}>Play Again </button>
+    </dialog>
+
+
+
+    <script src="xyz.js"></script>
+</body>
+
+</html>
