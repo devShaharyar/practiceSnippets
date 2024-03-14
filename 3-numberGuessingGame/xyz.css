@@ -8,8 +8,9 @@ body{
 }
 #main-bg {
     background-color: #E7EDF7;
-    min-width: 40rem;
-    max-width: 60rem;
+    width: 40rem;
+    /* min-width: 40rem; */
+    /* max-width: 60rem; */
     min-height: 15rem ;
     /* height: 22rem; */
     max-height: 30rem;
@@ -45,4 +46,14 @@ button {
 
 li{
     list-style: none;
+}
+@media (max-width:600px)  { /* smartphones, iPhone, portrait 480x320 phones */
+    body{
+        font-size: 12px;
+    }
+    #main-bg {
+        width: 18rem;
+    }
+
+
 }
