@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- icons -->
+    <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <title>responsiveSidebar</title>
+
+</head>
+
+<body class="bg-indigo-600 font-[Poppins]">
+    <!-- sideBar Button for smaller devices -->
+    <span class="absolute text-white text-4xl top-5 left-4 cursor-pointer">
+        <ion-icon name="filter" class="px-2 bg-gray-900 rounded-md " onclick="Open()"></ion-icon>
+    </span>
+
+    <div class="sidebar bg-gray-900 fixed top-0 bottom-0 lg:left-0 left-[-300px] p-2 w-[300px] overflow-y-auto text-center transition-all duration-300 ease-in-out">
+        <!-- logo and closeIcon -->
+        <div class="text-gray-100 text-xl">
+            <div class="p-2.5 mt-1 flex items-center ">
+                <ion-icon name="laptop-outline" class="px-2 py-1 bg-blue-600 rounded-md"></ion-icon>
+                <h1 class="text-gray-200 font-bold text-15px ml-3">tailwindBar</h1>
+                <ion-icon name="close-outline" class="ml-20 cursor-pointer lg:hidden" onclick="
+                Open()"></ion-icon>
+            </div>
+
+            <hr class="my-2 border-gray-600">
+
+            <!-- Search  -->
+        </div>
+        <div class="p-2 5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer bg-gray-700 text-white">
+            <ion-icon name="search-outline" class="text-sm"></ion-icon>
+            <input type="text" class="test text-[15px] ml-4 w-full bg-transparent focus:outline-none"
+                placeholder="Search">
+        </div>
+        <!-- Home  -->
+        <div
+            class="p-2 5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
+            <ion-icon name="home" class=""></ion-icon>
+            <span class="text-[15px] ml-4 text-gray-200">Home</span>
+        </div>
+        <!-- Bookmark  -->
+        <div
+            class="p-2 5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
+            <ion-icon name="Bookmark" class=""></ion-icon>
+            <span class="text-[15px] ml-4 text-gray-200">Bookmark</span>
+        </div>
+
+        <hr class="my-2 border-gray-600">
+
+        <!-- ChatBox  -->
+        <div
+            class="p-2 5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white" onclick="dropDown()">
+            <ion-icon name="chatbubble"></ion-icon>
+            <div class="flex justify-between w-full items-center">
+                <span class="text-[15px] ml-4 text-gray-200">Chatbox</span>
+                <span class="text-sm rotate-180" id="arrow">
+                    <ion-icon name="chevron-down"></ion-icon>
+                </span>
+            </div>
+        </div>
+        <!-- ChatBox insideMenu -->
+        <div class="text-left text-sm font-light mt-2 w-4/5 mx-auto text-gray-200" id=subMenu>
+            <h1 class="cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">Social</h1>
+            <h1 class="cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">Personal</h1>
+            <h1 class="cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">Friends</h1>
+        </div>
+
+        <!-- Logout  -->
+        <div
+            class="p-2 5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
+            <ion-icon name="log-out-outline"></ion-icon>
+            <span class="text-[15px] ml-4 text-gray-200">Logout</span>
+        </div>
+
+
+
+    </div>
+
+    <script>
+        function dropDown(){
+            document.querySelector("#subMenu").classList.toggle('hidden');
+            document.querySelector("#arrow").classList.toggle('rotate-0');
+        }
+        // dropDown();
+        const Open = () =>{
+            const sideBar= document.querySelector(".sidebar");
+            // sideBar.classList.toggle('left-[-300px]'); 
+            sideBar.classList.toggle('left-0'); //this for the transition to get in effect
+
+        }
+    </script>
+
+</body>
+
+</html>
+
