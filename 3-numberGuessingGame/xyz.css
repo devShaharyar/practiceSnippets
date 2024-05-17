@@ -47,6 +47,24 @@ button {
 li{
     list-style: none;
 }
+
+input[type=number]{
+    padding: 0.2rem 0.3rem;
+    background: transparent;
+    border: 1px solid rgb(197, 197, 197);
+    outline: none;
+    font-size: inherit;
+    text-align: center;
+}
+input[type=number]::placeholder{
+    /* color: #E7EDF7; */
+    /* text-align: center; */
+    color: black;
+    opacity: 60%;
+    /* font-size: bold; */
+    font-family: "Montserrat";
+}
+
 @media (max-width:600px)  { /* smartphones, iPhone, portrait 480x320 phones */
     body{
         font-size: 12px;
@@ -54,6 +72,4 @@ li{
     #main-bg {
         width: 18rem;
     }
-
-
 }
